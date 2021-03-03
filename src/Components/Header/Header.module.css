@@ -1,0 +1,13 @@
+.navSection {
+  display: block;
+  background: url("../../assets/image/mountain-5971939_1920.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  /* opacity:0.8;
+-moz-opacity:0.8;
+filter: alpha(opacity=80) black;
+-khtml-opacity: 0.8;
+background-color:#000; */
+}
