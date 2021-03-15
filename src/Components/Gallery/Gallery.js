@@ -1,6 +1,7 @@
 import React, { useRef, useState, useEffect } from "react";
 import { Link, useRouteMatch } from "react-router-dom";
 import styled from "styled-components";
+import { routes } from "../routes";
 
 import {
   SpinContainer,
@@ -116,18 +117,20 @@ const Gallery = ({ galleryImages, scrollRef }) => {
     // };
   }, [autoRotate, radius, rotateSpeed]);
 
-  const match = useRouteMatch();
+  const match = useRouteMatch([...routes]);
+  console.log(match);
 
   return (
     <Container ref={scrollRef}>
       <HeadlineWrap>
-        <h3>Latest Albums</h3>
-        <p>This is a subtitle, feel free to change it!</p>
+        <Title>Latest Albums</Title>
+        <Subtitle>This is a subtitle, feel free to change it!</Subtitle>
       </HeadlineWrap>
+
       <DragContainer id="drag-container">
         <SpinContainer id="spin-container">
           {galleryImages.map((image) => (
-            <Link key={image.id} to={`${match.path}/${image.id}`}>
+            <Link key={image.id} to={`${match.path.path}/${image.id}`}>
               <GalleryImages src={image.src} alt={image.alt} />
             </Link>
           ))}
@@ -144,32 +147,27 @@ const Container = styled.div`
   overflow: hidden;
   display: flex;
   /* background: #111; */
+  flex-direction: column;
   perspective: 1000px;
   transform-style: preserve-3d;
 `;
 
-const HeadlineWrap = styled.span`
-  /* margin-top: 10px; */
-  /* margin-bottom: 60px; */
+const HeadlineWrap = styled.div`
   text-align: center;
-  margin: 0 auto;
+  margin-top: 20px;
 `;
 
 const Title = styled.h3`
   font-family: ${({ theme }) => theme.fonts.lora};
   font-size: 30px;
-  margin-bottom: 0;
-  color: white;
-  /* position: relative; */
-  /* display: inline-block; */
+  font-weight: 400;
 `;
 
 const Subtitle = styled.p`
   font-family: ${({ theme }) => theme.fonts.lora};
   font-size: 17px;
+  font-weight: 400;
   color: #888;
-  max-width: 720px;
-  margin: 17px auto 0;
 `;
 
 // const TextGallery = styled.p`

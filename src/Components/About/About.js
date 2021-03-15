@@ -46,11 +46,13 @@ const WrapDescription = styled.div`
 const Title = styled.h2`
   font-size: 32px;
   font-family: ${({ theme }) => theme.fonts.lora};
+  font-weight: 400;
 `;
 
 const Text = styled.p`
   font-size: 16px;
   color: #606060;
+  font-weight: 400;
   font-family: ${({ theme }) => theme.fonts.lora};
   line-height: 30px;
   &:nth-of-type(1) {

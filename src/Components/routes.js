@@ -5,20 +5,25 @@ const AsyncHomePage = lazy(
 );
 
 const AsyncGalleryItemPage = lazy(
-  () => import("../Pages/GalleryItemPage") /* webpackChunkName: "gallery-item-page" */
+  () =>
+    import(
+      "../Pages/GalleryItemPage"
+    ) /* webpackChunkName: "gallery-item-page" */
 );
 
+const galleryItem = {
+  path: "/gallery/:id",
+  exact: false,
+  Component: <AsyncGalleryItemPage />,
+  name: "Gallery",
+};
+
 export const routes = [
+  galleryItem,
   {
     path: "/",
     exact: true,
     Component: <AsyncHomePage />,
     name: "Home",
-  },
-  {
-    path: "/gallery/:id",
-    exact: false,
-    Component: <AsyncGalleryItemPage />,
-    name: "Gallery",
   },
 ];
