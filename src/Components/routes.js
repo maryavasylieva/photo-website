@@ -4,8 +4,8 @@ const AsyncHomePage = lazy(
   () => import("../Pages/HomePage") /* webpackChunkName: "home-page" */
 );
 
-const AsyncGalleryPage = lazy(
-  () => import("../Pages/GalleryPage") /* webpackChunkName: "home-page" */
+const AsyncGalleryItemPage = lazy(
+  () => import("../Pages/GalleryItemPage") /* webpackChunkName: "gallery-item-page" */
 );
 
 export const routes = [
@@ -16,9 +16,9 @@ export const routes = [
     name: "Home",
   },
   {
-    path: "/gallery",
+    path: "/gallery/:id",
     exact: false,
-    Component: <AsyncGalleryPage />,
+    Component: <AsyncGalleryItemPage />,
     name: "Gallery",
   },
 ];

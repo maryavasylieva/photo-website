@@ -7,8 +7,10 @@ html {
   padding: 0;
   width: 100%;
   height: 100%;
-  overflow: hidden;
+  /* overflow: hidden; */
   font-family: "Monument Extended", Arial, Helvetica, sans-serif;
+
+  scroll-behavior: smooth;
 }
 
 body {
@@ -20,14 +22,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  /* parallax effect */
-  perspective: 1px;
-  transform-style: preserve-3d;
-  height: 100%;
-  width: 100%;
-  overflow-y: scroll;
-  overflow-x: hidden;
 }
+
 
 *,
 *::before,
@@ -45,4 +41,28 @@ ul,
 li {
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
+}
+
+
+/* carousel */
+@keyframes spin {
+  from {
+    -webkit-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+  }
+  to {
+    -webkit-transform: rotateY(360deg);
+    transform: rotateY(360deg);
+  }
+}
+
+@keyframes spinRevert {
+  from {
+    -webkit-transform: rotateY(360deg);
+    transform: rotateY(360deg);
+  }
+  to {
+    -webkit-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+  }
 }

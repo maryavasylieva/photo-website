@@ -6,7 +6,9 @@ import { SlideUp, SlideDown } from "animate-components";
 import NavigationList from "./NavigationList";
 import styles from "./Header.module.css";
 
-const Header = () => {
+// TODO: Set sticky header
+
+const Header = ({ onClick }) => {
   return (
     <div className={styles.navSection}>
       <SlideDown className="main" as="div" duration="0.7s">
@@ -26,7 +28,8 @@ const Header = () => {
               the greater Los Angeles area.
             </Text>
             <ButtonWrap>
-              <Button to="/gallery">Get started</Button>
+              {/* <Button to="/gallery">Get started</Button> */}
+              <Button onClick={onClick}>Get Started</Button>
             </ButtonWrap>
           </div>
         </SlideUp>
@@ -65,7 +68,21 @@ const ButtonWrap = styled.div`
   padding: 28px;
 `;
 
-const Button = styled(Link)`
+// const Button = styled(Link)`
+//   border: 2px solid transparent;
+//   border-radius: 5px;
+//   padding: 15px 28px;
+//   font-family: ${({ theme }) => theme.fonts.lora};
+//   text-transform: uppercase;
+//   font-weight: 500;
+//   font-size: 14px;
+//   background: #ffffff;
+//   text-decoration: none;
+//   color: #000000;
+//   cursor: pointer;
+// `;
+
+const Button = styled.button`
   border: 2px solid transparent;
   border-radius: 5px;
   padding: 15px 28px;
