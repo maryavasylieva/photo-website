@@ -10,16 +10,16 @@ const NavigationList = () => {
           <Link to="/">Home</Link>
         </NavElem>
         <NavElem>
-          <Link to="/">About</Link>
+          <Link to="/about">About</Link>
         </NavElem>
         <NavElem>
-          <Link to="/">Albums</Link>
+          <Link to="/albums">Albums</Link>
         </NavElem>
         <NavElem>
-          <Link to="/">Blog</Link>
+          <Link to="/blog">Blog</Link>
         </NavElem>
         <NavElem>
-          <Link to="/">Contact</Link>
+          <Link to="/contact">Contact</Link>
         </NavElem>
       </NavList>
     </Navigation>

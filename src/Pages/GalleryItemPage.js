@@ -1,19 +1,21 @@
 import React from "react";
 import { useHistory, useParams } from "react-router-dom";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 import GalleryItem from "../Components/Gallery/GalleryItem";
 import galleryImages from "../assets/image/images.json";
 
-// const getImageObj = (arr, id) => arr.find((el) => el.id === id);
-
-const GalleryPage = () => {
+const GalleryItemPage = () => {
+  const { id } = useParams();
   const history = useHistory();
-  // const id = useParams();
+  const getImageObj = (arr, id) => arr.find((el) => el.id === id);
+  console.log(history);
+  console.log(id);
 
   return (
     <Container>
-      <GalleryItem galleryImages={galleryImages} />
+      <GalleryItem {...getImageObj(galleryImages, id)} />
       <Button type="button" onClick={() => history.push("/")}>
         Return
       </Button>
@@ -24,8 +26,7 @@ const GalleryPage = () => {
 const Container = styled.div`
   max-width: 100%;
   height: 100vh;
-  background: #f8f8f8;
-  /* padding: 90px 70px; */
+  /* background: #f8f8f8; */
 `;
 
 const Button = styled.button`
@@ -42,4 +43,4 @@ const Button = styled.button`
   font-family: ${({ theme }) => theme.fonts.lora};
   font-size: 12px;
 `;
-export default GalleryPage;
+export default GalleryItemPage;

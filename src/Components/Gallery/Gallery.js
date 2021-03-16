@@ -1,4 +1,4 @@
-import React, { useRef, useState, useEffect } from "react";
+import React, { lazy, useRef, useState, useEffect } from "react";
 import { Link, useRouteMatch } from "react-router-dom";
 import styled from "styled-components";
 import { routes } from "../routes";
@@ -12,6 +12,8 @@ import {
 
 // TODO: 1. remove static props
 // TODO: 2. TO INVESTIGATE: set ref on parent component, get all child elemets
+
+// TODO: modal window on click photo
 
 const Gallery = ({ galleryImages, scrollRef }) => {
   const [radius, setRadius] = useState(240);
@@ -117,7 +119,7 @@ const Gallery = ({ galleryImages, scrollRef }) => {
     // };
   }, [autoRotate, radius, rotateSpeed]);
 
-  const match = useRouteMatch([...routes]);
+  const match = useRouteMatch();
   console.log(match);
 
   return (
@@ -130,7 +132,11 @@ const Gallery = ({ galleryImages, scrollRef }) => {
       <DragContainer id="drag-container">
         <SpinContainer id="spin-container">
           {galleryImages.map((image) => (
-            <Link key={image.id} to={`${match.path.path}/${image.id}`}>
+            <Link
+              key={image.id}
+              // to="/albums/124"
+              to={`${match.path}albums/${image.id}`}
+            >
               <GalleryImages src={image.src} alt={image.alt} />
             </Link>
           ))}
@@ -154,7 +160,7 @@ const Container = styled.div`
 
 const HeadlineWrap = styled.div`
   text-align: center;
-  margin-top: 20px;
+  margin-top: 35px;
 `;
 
 const Title = styled.h3`
@@ -168,6 +174,7 @@ const Subtitle = styled.p`
   font-size: 17px;
   font-weight: 400;
   color: #888;
+  margin-bottom: 0;
 `;
 
 // const TextGallery = styled.p`

@@ -11,19 +11,62 @@ const AsyncGalleryItemPage = lazy(
     ) /* webpackChunkName: "gallery-item-page" */
 );
 
-const galleryItem = {
-  path: "/gallery/:id",
-  exact: false,
-  Component: <AsyncGalleryItemPage />,
-  name: "Gallery",
-};
+const AsyncAlbumsPage = lazy(
+  () => import("../Pages/AlbumsPage") /* webpackChunkName: "albums-page" */
+);
+
+const AsyncBlogPage = lazy(
+  () => import("../Pages/BlogPage") /* webpackChunkName: "blog-page" */
+);
+
+const AsyncContactPage = lazy(
+  () => import("../Pages/ContactPage") /* webpackChunkName: "contact-page" */
+);
+
+const AsyncAboutPage = lazy(
+  () => import("../Pages/AboutPage") /* webpackChunkName: "about-page" */
+);
 
 export const routes = [
-  galleryItem,
   {
     path: "/",
     exact: true,
     Component: <AsyncHomePage />,
     name: "Home",
+  },
+
+  {
+    path: "/albums",
+    exact: true,
+    Component: <AsyncAlbumsPage />,
+    name: "Albums",
+  },
+
+  {
+    path: "/albums/:id",
+    exact: false,
+    Component: <AsyncGalleryItemPage />,
+    name: "Albums",
+  },
+
+  {
+    path: "/blog",
+    exact: false,
+    Component: <AsyncBlogPage />,
+    name: "Blog",
+  },
+
+  {
+    path: "/about",
+    exact: false,
+    Component: <AsyncAboutPage />,
+    name: "About",
+  },
+
+  {
+    path: "/contact",
+    exact: false,
+    Component: <AsyncContactPage />,
+    name: "Contact",
   },
 ];

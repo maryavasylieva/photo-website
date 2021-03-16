@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 const About = () => {
   return (
@@ -21,6 +22,9 @@ const About = () => {
           dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus
           nec ullamcorper mattis, pulvinar dapibus leo.
         </Text>
+        <ButtonWrap>
+          <Button to="/about">More info</Button>
+        </ButtonWrap>
       </WrapDescription>
     </Container>
   );
@@ -67,6 +71,27 @@ const Text = styled.p`
       margin-bottom: 40px;
     }
   }
+`;
+
+const ButtonWrap = styled.div`
+  text-align: left;
+  /* outline: 2px solid red; */
+  padding:  30px 0 30px;
+`;
+
+const Button = styled(Link)`
+  border: 2px solid transparent;
+  border-radius: 5px;
+  padding: 15px 28px;
+  margin-top: 20px;
+  font-family: ${({ theme }) => theme.fonts.lora};
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 14px;
+  background: #373a3c;
+  text-decoration: none;
+  color: #ffffff;
+  cursor: pointer;
 `;
 
 export default About;
