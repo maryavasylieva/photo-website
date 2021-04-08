@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 import Header from "../Header/Header";
 import Gallery from "../Gallery/Gallery";
-import galleryImages from "../../assets/image/images.json";
+import galleryImages from "../../assets/json/images.json";
 import About from "../About/About";
 
 const Dashboard = () => {

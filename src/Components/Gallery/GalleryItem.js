@@ -1,20 +1,22 @@
 import React from "react";
 import styled from "styled-components";
-import {Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const GalleryItem = ({ src, alt, description, name }) => (
   <>
-   <WrapperHeadline>
+    <WrapperHeadline>
+      <Section>
         <Headline>{name}</Headline>
+
         <BreadcrumbsHolder>
-          <Breadcrumbs>
-            <Breadcrumb>
-              <BackToHome to="/">Home</BackToHome>
-            </Breadcrumb>
-            <Breadcrumb>{name}</Breadcrumb>
-          </Breadcrumbs>
+          <Breadcrumb>
+            <BackToHome to="/">Home</BackToHome>
+          </Breadcrumb>
+          <Breadcrumb>{name}</Breadcrumb>
         </BreadcrumbsHolder>
-      </WrapperHeadline>
+      </Section>
+    </WrapperHeadline>
+
     <Container>
       <Image src={src} alt={alt} />
       <WrapDescription>
@@ -71,12 +73,22 @@ const Text = styled.p`
   }
 `;
 
-
 const WrapperHeadline = styled.div`
   max-width: 100%;
   height: 145px;
   background: #000000;
+  /* margin: 0 auto; */
+  display: flex;
+  justify-content: center;
+
 `;
+
+const Section = styled.div`
+   display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+`
 
 const Headline = styled.h2`
   color: white;
@@ -86,10 +98,10 @@ const Headline = styled.h2`
   font-family: ${({ theme }) => theme.fonts.lora};
 `;
 
-const BreadcrumbsHolder = styled.div``;
-
-const Breadcrumbs = styled.ul`
+const BreadcrumbsHolder = styled.ul`
   list-style-type: none;
+  display: flex;
+  padding: 0;
 `;
 
 const Breadcrumb = styled.li`

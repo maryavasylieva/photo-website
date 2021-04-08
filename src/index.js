@@ -7,7 +7,7 @@ import { BrowserRouter, Route } from "react-router-dom";
 import Root from "./Components/Root/Root";
 
 ReactDOM.render(
-  <BrowserRouter>
+  <BrowserRouter basename="/photo-website">
     <Route component={Root} />
   </BrowserRouter>,
   document.getElementById("root")

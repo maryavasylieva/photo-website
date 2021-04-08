@@ -1,7 +1,6 @@
-import React, { lazy, useRef, useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { Link, useRouteMatch } from "react-router-dom";
 import styled from "styled-components";
-import { routes } from "../routes";
 
 import {
   SpinContainer,

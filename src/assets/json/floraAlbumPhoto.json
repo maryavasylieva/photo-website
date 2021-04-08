@@ -1,0 +1,100 @@
+[
+  {
+    "key": "photo1",
+    "src": "https://images.pexels.com/photos/5213427/pexels-photo-5213427.png?cs=srgb&dl=pexels-kokokara-5213427.jpg&fm=jpg",
+    "width": 2,
+    "height": 2,
+    "alt": "mountain photo"
+  },
+  {
+    "key": "photo2",
+    "src": "https://images.pexels.com/photos/4041364/pexels-photo-4041364.jpeg?cs=srgb&dl=pexels-karolina-grabowska-4041364.jpg&fm=jpg",
+    "width": 3,
+    "height": 3,
+    "alt": "mountain photo"
+  },
+  {
+    "key": "photo3",
+    "src": "https://images.pexels.com/photos/2879812/pexels-photo-2879812.jpeg?cs=srgb&dl=pexels-secret-garden-2879812.jpg&fm=jpg",
+    "width": 3,
+    "height": 3,
+    "alt": "mountain photo"
+  },
+  {
+    "key": "photo4",
+    "src": "https://images.pexels.com/photos/1520620/pexels-photo-1520620.jpeg?cs=srgb&dl=pexels-lina-kivaka-1520620.jpg&fm=jpg",
+    "width": 3,
+    "height": 3,
+    "alt": "mountain photo"
+  },
+  {
+    "key": "photo5",
+    "src": "https://images.pexels.com/photos/1030913/pexels-photo-1030913.jpeg?cs=srgb&dl=pexels-daria-shevtsova-1030913.jpg&fm=jpg",
+    "width": 6,
+    "height": 4,
+    "alt": "mountain photo"
+  },
+  {
+    "key": "photo6",
+    "src": "https://images.pexels.com/photos/6685425/pexels-photo-6685425.jpeg?cs=srgb&dl=pexels-syed-qaarif-andrabi-6685425.jpg&fm=jpg",
+    "width": 4,
+    "height": 3,
+    "alt": "mountain photo"
+  },
+  {
+    "key": "photo7",
+    "src": "https://images.pexels.com/photos/6495305/pexels-photo-6495305.jpeg?cs=srgb&dl=pexels-eva-elijas-6495305.jpg&fm=jpg",
+    "width": 6,
+    "height": 4,
+    "alt": "mountain photo"
+  },
+  {
+    "key": "photo8",
+    "src": "https://images.pexels.com/photos/5213427/pexels-photo-5213427.png?cs=srgb&dl=pexels-kokokara-5213427.jpg&fm=jpg",
+    "width": 9,
+    "height": 3,
+    "alt": "mountain photo"
+  },
+  {
+    "key": "photo9",
+    "src": "https://images.pexels.com/photos/4041364/pexels-photo-4041364.jpeg?cs=srgb&dl=pexels-karolina-grabowska-4041364.jpg&fm=jpg",
+    "width": 4,
+    "height": 3,
+    "alt": "mountain photo"
+  },
+  {
+    "key": "photo10",
+    "src": "https://images.pexels.com/photos/2879812/pexels-photo-2879812.jpeg?cs=srgb&dl=pexels-secret-garden-2879812.jpg&fm=jpg",
+    "width": 4,
+    "height": 3,
+    "alt": "mountain photo"
+  },
+  {
+    "key": "photo11",
+    "src": "https://images.pexels.com/photos/1520620/pexels-photo-1520620.jpeg?cs=srgb&dl=pexels-lina-kivaka-1520620.jpg&fm=jpg",
+    "width": 4,
+    "height": 3,
+    "alt": "mountain photo"
+  },
+  {
+    "key": "photo12",
+    "src": "https://images.pexels.com/photos/1030913/pexels-photo-1030913.jpeg?cs=srgb&dl=pexels-daria-shevtsova-1030913.jpg&fm=jpg",
+    "width": 4,
+    "height": 3,
+    "alt": "mountain photo"
+  },
+  {
+    "key": "photo13",
+    "src": "https://images.pexels.com/photos/6685425/pexels-photo-6685425.jpeg?cs=srgb&dl=pexels-syed-qaarif-andrabi-6685425.jpg&fm=jpg",
+    "width": 4,
+    "height": 3,
+    "alt": "mountain photo"
+  },
+  {
+    "key": "photo14",
+    "src": "https://images.pexels.com/photos/6495305/pexels-photo-6495305.jpeg?cs=srgb&dl=pexels-eva-elijas-6495305.jpg&fm=jpg",
+    "width": 4,
+    "height": 3,
+    "alt": "mountain photo"
+  }
+]

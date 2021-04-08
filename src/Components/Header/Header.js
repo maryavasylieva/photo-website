@@ -68,20 +68,6 @@ const ButtonWrap = styled.div`
   padding: 28px;
 `;
 
-// const Button = styled(Link)`
-//   border: 2px solid transparent;
-//   border-radius: 5px;
-//   padding: 15px 28px;
-//   font-family: ${({ theme }) => theme.fonts.lora};
-//   text-transform: uppercase;
-//   font-weight: 500;
-//   font-size: 14px;
-//   background: #ffffff;
-//   text-decoration: none;
-//   color: #000000;
-//   cursor: pointer;
-// `;
-
 const Button = styled.button`
   border: 2px solid transparent;
   border-radius: 5px;
