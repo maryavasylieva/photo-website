@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 
 const GalleryItem = ({ src, alt, description, name }) => (
-  <>
+  <Container>
     <WrapperHeadline>
       <Section>
         <Headline>{name}</Headline>
@@ -17,7 +17,7 @@ const GalleryItem = ({ src, alt, description, name }) => (
       </Section>
     </WrapperHeadline>
 
-    <Container>
+    <Wrapper>
       <Image src={src} alt={alt} />
       <WrapDescription>
         <Title>About Project</Title>
@@ -28,11 +28,25 @@ const GalleryItem = ({ src, alt, description, name }) => (
           nec ullamcorper mattis, pulvinar dapibus leo.
         </Text>
       </WrapDescription>
-    </Container>
-  </>
+    </Wrapper>
+  </Container>
 );
 
 const Container = styled.div`
+   /* &::after {
+    display: block;
+    width: 800px;
+    height: 1px;
+    background-color: #e3e3e3;
+    content: "";
+    text-align: left;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    margin: 0 auto;
+  } */
+`
+
+const Wrapper = styled.div`
   display: flex;
   justify-content: space-around;
   padding: 90px 70px;

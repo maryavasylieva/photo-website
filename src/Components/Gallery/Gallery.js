@@ -54,11 +54,7 @@ const Gallery = ({ galleryImages, scrollRef }) => {
       ospin.style.animationPlayState = yes ? "running" : "paused";
     }
 
-    var sX,
-      sY,
-      nX,
-      nY,
-      desX = 0,
+    var desX = 0,
       desY = 0,
       tX = 0,
       tY = 10;
@@ -139,7 +135,6 @@ const Gallery = ({ galleryImages, scrollRef }) => {
               <GalleryImages src={image.src} alt={image.alt} />
             </Link>
           ))}
-          {/* <TextGallery>3D Tiktok Carousel</TextGallery> */}
         </SpinContainer>
         <Ground id="ground" width={radius * 3} height={radius * 3} />
       </DragContainer>
