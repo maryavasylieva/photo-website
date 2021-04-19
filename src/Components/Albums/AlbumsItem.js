@@ -1,10 +1,14 @@
-import { useState, useCallback, useEffect } from "react";
+import { useState, useCallback } from "react";
 import Lightbox from "react-image-lightbox";
 import "react-image-lightbox/style.css";
-import Gallery from "react-photo-gallery";
-import styled, { css } from "styled-components";
+// import Gallery from "react-photo-gallery";
+import styled from "styled-components";
 import { motion } from "framer-motion";
-import styles from "../../stylesheet/index.css";
+
+import { ReactComponent as Glass } from "../../assets/glass.svg";
+import { ReactComponent as LinkChain } from "../../assets/link (1).svg";
+
+import styles from "./AlbumsItem.module.css";
 
 const container = {
   hidden: { opacity: 1, scale: 0 },
@@ -54,12 +58,22 @@ const AlbumsItem = ({ photos }) => {
         variants={container}
         initial="hidden"
         animate="visible"
-        onClick={openLightbox}
       >
         {photos.map((card) => (
-          <Card key={card.key} variants={item}>
+          <motion.li key={card.key} variants={item} className={styles.card}>
             <Image src={card.src} alt={card.alt} />
-          </Card>
+
+            <div className={styles.iconContainer}>
+              <IconList>
+                <IconButton onClick={openLightbox}>
+                  <IconZoom />
+                </IconButton>
+                <IconButton>
+                  <IconLink />
+                </IconButton>
+              </IconList>
+            </div>
+          </motion.li>
         ))}
       </Container>
 
@@ -92,19 +106,45 @@ const Container = styled(motion.ul)`
   /* grid-template-rows: repeat(8, 5vw); */
   grid-gap: 15px;
   padding: 15px;
-  background: rgba(255, 255, 255, 0.2);
-  border-radius: 50px;
-`;
-
-const Card = styled(motion.li)`
-
-
 `;
 
 const Image = styled.img`
   width: 100%;
   height: 100%;
   object-fit: cover;
+`;
+
+const IconList = styled.div`
+  width: 150px;
+  display: flex;
+  justify-content: space-evenly;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  z-index: 2;
+`;
+
+const IconButton = styled.button`
+  width: 29px;
+  height: 38px;
+  border-radius: 50%;
+  border: transparent;
+  background: rgba(255, 255, 255, 0.9);
+  &:hover {
+    background: rgba(255, 255, 255, 0.7);
+    cursor: pointer;
+    transition: background 0.5s ease;
+  }
+`;
+const IconZoom = styled(Glass)`
+  width: 20px;
+  height: 20px;
+`;
+const IconLink = styled(LinkChain)`
+  width: 23px;
+  height: 23px;
 `;
 
 export default AlbumsItem;

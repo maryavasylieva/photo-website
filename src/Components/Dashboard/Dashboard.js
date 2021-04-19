@@ -5,6 +5,7 @@ import Header from "../Header/Header";
 import Gallery from "../Gallery/Gallery";
 import galleryImages from "../../assets/json/images.json";
 import About from "../About/About";
+import Footer from "../Footer/Footer";
 
 const Dashboard = () => {
   const scrollRef = useRef(null);
@@ -30,6 +31,7 @@ const Dashboard = () => {
       </Section>
       <About />
       <Gallery galleryImages={galleryImages} scrollRef={scrollRef} />
+      <Footer/>
     </>
   );
 };

@@ -62,3 +62,13 @@ li {
     transform: rotateY(0deg);
   }
 }
+
+/* opacity */
+
+.card:hover img {
+  transform: scale(1.05, 1.05);
+}
+
+.card:hover::before {
+  opacity: 1;
+}
