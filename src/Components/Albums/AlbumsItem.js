@@ -100,7 +100,7 @@ const Container = styled(motion.ul)`
   overflow: hidden;
   margin: 0;
   list-style-type: none;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   /* grid-template-rows: repeat(8, 5vw); */
   grid-gap: 15px;
   padding: 15px;

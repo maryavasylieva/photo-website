@@ -36,21 +36,23 @@ const GalleryItemPage = () => {
   return (
     <Container>
       <GalleryItem {...getImageObj(galleryImages, id)} />
-      <Button
+      {/* <Button
        type="button"
        onClick={openGalleryGrid}
        >
         View more
-      </Button>
+      </Button> */}
+      <Wrapper>
+      <AlbumsItem photos={photos} />
+      </Wrapper>
 
-      {openGallery ? (
+      {/* {openGallery ? (
         <>
-          <AlbumsItem photos={photos} />
           <Button type="button" onClick={() => history.push("/")}>
             Return
           </Button>
         </>
-      ) : null}
+      ) : null} */}
     </Container>
   );
 };
@@ -60,6 +62,21 @@ const Container = styled.div`
   height: 100vh;
   /* background: #f8f8f8; */
 `;
+
+const Wrapper = styled.div`
+   max-width: 1200px;
+   margin: 0 auto;
+   &:before {
+    display: block;
+      width: 500px;
+      height: 1px;
+      background-color: #e3e3e3;
+      content: "";
+      margin: 0 auto;
+      margin-top: 40px;
+      margin-bottom: 40px;
+   }
+`
 
 const Button = styled.button`
   display: block;

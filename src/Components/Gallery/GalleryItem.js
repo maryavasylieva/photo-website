@@ -33,7 +33,7 @@ const GalleryItem = ({ src, alt, description, name }) => (
 );
 
 const Container = styled.div`
-   /* &::after {
+  /* &::after {
     display: block;
     width: 800px;
     height: 1px;
@@ -44,12 +44,12 @@ const Container = styled.div`
     margin-bottom: 40px;
     margin: 0 auto;
   } */
-`
+`;
 
 const Wrapper = styled.div`
   display: flex;
   justify-content: space-around;
-  padding: 90px 70px;
+  margin: 90px 0 70px 0;
 `;
 
 const Image = styled.img`
@@ -94,15 +94,14 @@ const WrapperHeadline = styled.div`
   /* margin: 0 auto; */
   display: flex;
   justify-content: center;
-
 `;
 
 const Section = styled.div`
-   display: flex;
+  display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-`
+`;
 
 const Headline = styled.h2`
   color: white;
