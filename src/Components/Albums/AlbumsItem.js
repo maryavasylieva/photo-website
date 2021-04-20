@@ -30,9 +30,10 @@ const item = {
   },
 };
 
-const AlbumsItem = ({ photos }) => {
+const AlbumsItem = ({photos}) => {
   const [currentImage, setCurrentImage] = useState(0);
   const [viewerIsOpen, setViewerIsOpen] = useState(false);
+
 
   const openLightbox = useCallback((event, { photo, index }) => {
     console.log(photo);
@@ -46,6 +47,7 @@ const AlbumsItem = ({ photos }) => {
     setViewerIsOpen(false);
   };
 
+
   return (
     <>
       {/* <Gallery
@@ -54,11 +56,7 @@ const AlbumsItem = ({ photos }) => {
           // ref={scrollToGalleryRef}
         /> */}
 
-      <Container
-        variants={container}
-        initial="hidden"
-        animate="visible"
-      >
+      <Container variants={container} initial="hidden" animate="visible">
         {photos.map((card) => (
           <motion.li key={card.key} variants={item} className={styles.card}>
             <Image src={card.src} alt={card.alt} />
