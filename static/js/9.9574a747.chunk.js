@@ -1,0 +1,2 @@
+(this["webpackJsonpphoto-website"]=this["webpackJsonpphoto-website"]||[]).push([[9],{243:function(t,e,s){"use strict";s.r(e);s(0);var o=s(1);e.default=function(){return Object(o.jsx)("h1",{children:"Blog Page"})}}}]);
+//# sourceMappingURL=9.9574a747.chunk.js.map

@@ -1,1 +1,0 @@
-{"version":3,"sources":["Pages/BlogPage.js"],"names":["BlogPage"],"mappings":"qHAAA,uBAIeA,UAFE,kBAAM","file":"static/js/8.99a8c415.chunk.js","sourcesContent":["import React from \"react\";\n\nconst BlogPage = () => <h1>Blog Page</h1>;\n\nexport default BlogPage;\n"],"sourceRoot":""}
