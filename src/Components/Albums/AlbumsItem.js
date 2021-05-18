@@ -53,10 +53,11 @@ const AlbumsItem = ({ photos }) => {
           onClick={openLightbox}
           // ref={scrollToGalleryRef}
         /> */}
+
       <Container variants={container} initial="hidden" animate="visible">
-        {photos.map((card) => (
-          <motion.li key={card.name} variants={item} className={styles.card}>
-            <Image src={card.data} alt={card.name} />
+        {photos.map((card, index) => (
+          <motion.li key={index} variants={item} className={styles.card}>
+            <Image src={`data:image.jpg;base64,${card.data}`} alt={card.name} />
 
             <div className={styles.iconContainer}>
               <IconList>
@@ -104,6 +105,7 @@ const Container = styled(motion.ul)`
 `;
 
 const Image = styled.img`
+  display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -126,11 +128,11 @@ const IconButton = styled.button`
   height: 38px;
   border-radius: 50%;
   border: transparent;
-  background: rgba(255, 255, 255, 0.9);
+  background-color: rgba(255, 255, 255, 0.9);
   &:hover {
-    background: rgba(255, 255, 255, 0.7);
+    background-color: rgba(255, 255, 255, 0.7);
     cursor: pointer;
-    transition: background 0.5s ease;
+    transition: background-color 0.5s ease;
   }
 `;
 const IconZoom = styled(Glass)`

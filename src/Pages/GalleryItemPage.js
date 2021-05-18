@@ -15,11 +15,15 @@ const GalleryItemPage = () => {
   const [photos, setPhotos] = useState([]);
 
   useEffect(() => {
-    api.getPhoto(5).then(data => {
-      console.log(data)
-      setPhotos(data)
-    })
+    api
+      .getPhoto(5)
+      .then((data) => {
+        console.log(data.data);
+        setPhotos(data.data);
+      })
+      .catch((e) => console.log("Error when get photos: ", e));
   }, []);
+
 
   const getImageObj = (arr, id) => arr.find((el) => el.id === id);
   console.log(history);
@@ -38,7 +42,6 @@ const GalleryItemPage = () => {
 const Container = styled.div`
   max-width: 100%;
   height: 100vh;
-  /* background: #f8f8f8; */
 `;
 
 const Wrapper = styled.div`
@@ -56,19 +59,19 @@ const Wrapper = styled.div`
   }
 `;
 
-const Button = styled.button`
-  display: block;
-  background-color: #373a3c;
-  color: #fff;
-  width: 140px;
-  height: 40px;
-  margin: 0 auto;
-  border-radius: 5px;
-  text-align: center;
-  margin-top: 30px;
-  margin-bottom: 30px;
-  border: none;
-  font-family: ${({ theme }) => theme.fonts.lora};
-  font-size: 12px;
-`;
+// const Button = styled.button`
+//   display: block;
+//   background-color: #373a3c;
+//   color: #fff;
+//   width: 140px;
+//   height: 40px;
+//   margin: 0 auto;
+//   border-radius: 5px;
+//   text-align: center;
+//   margin-top: 30px;
+//   margin-bottom: 30px;
+//   border: none;
+//   font-family: ${({ theme }) => theme.fonts.lora};
+//   font-size: 12px;
+// `;
 export default GalleryItemPage;

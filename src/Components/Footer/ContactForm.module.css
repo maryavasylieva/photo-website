@@ -1,23 +1,26 @@
 .parallaxWrapper {
-  background-color: #000;
+  background-color: #f8f8f8;
   /* background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
     background-attachment: fixed; */
   height: 100vh;
   width: 100%;
-  padding: 100px 0;
+  /* padding: 100px 0; */
 }
 
 .container {
-  min-height: 100%;
-  max-width: 1400px;
+  height: 700px;
+  /* max-width: 1400px; */
+  display: flex;
   margin: 0 auto;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .title,
 .subtitle {
-  color: #ffffff;
+  color: #6a6a6a;
   text-align: center;
   margin: 0;
   padding: 0;
@@ -43,8 +46,6 @@
 }
 
 .order {
-  display: flex;
-  flex-direction: column;
   padding-bottom: 30px;
 }
 
@@ -140,10 +141,9 @@
 
 /*BUTTON SUBMIT FORM*/
 .button {
-  display: block;
+  /* display: block;
   margin: 0 auto;
   width: 210px;
-  /*background-color: #ef5b4c;*/
   background-color: transparent;
   border: 1px solid #ffffff;
   padding: 16px 0;
@@ -152,11 +152,28 @@
   font-size: 16px;
   line-height: 16px;
   cursor: pointer;
-  color: #fefefe;
+  color: #fefefe; */
+
+  display: block;
+  background-color: #373a3c;
+  color: #fff;
+  width: 210px;
+  /* height: 40px; */
+  padding: 16px 0;
+  margin: 0 auto;
+  border-radius: 5px;
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  border: none;
+  cursor: pointer;
+  font-family: "Lora", sans-serif;
+  font-size: 12px;
 }
 
 .button:hover {
   /*background-color: #d24335;*/
-  background-color: #ffffff;
-  color: #6a6a6a;
+  background-color: #6a6a6a;
+  transition: background-color 0.5s ease;
+  /* color: #6a6a6a; */
 }
