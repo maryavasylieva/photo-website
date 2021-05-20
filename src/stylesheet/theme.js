@@ -6,7 +6,6 @@ const colors = {
   buttonBackground: "#bcb7b7",
   subTitle: "#333333",
   mainText: "#999999",
-  // hoverButton: "#ccc5c5",
   hover: "#f7f2f2",
   hoverText: "#999994",
   softGrey: "#afacac",

@@ -114,6 +114,7 @@ const Gallery = ({ galleryImages, scrollRef }) => {
     // };
   }, [autoRotate, radius, rotateSpeed]);
 
+
   const match = useRouteMatch();
   console.log(match);
 
@@ -126,12 +127,8 @@ const Gallery = ({ galleryImages, scrollRef }) => {
 
       <DragContainer id="drag-container">
         <SpinContainer id="spin-container">
-          {galleryImages.map((image) => (
-            <Link
-              key={image.id}
-              // to="/albums/124"
-              to={`${match.path}albums/${image.id}`}
-            >
+          {galleryImages.map((image, index) => (
+            <Link key={index} to={`${match.path}albums/${index}`}>
               <GalleryImages src={image.src} alt={image.alt} />
             </Link>
           ))}
@@ -146,7 +143,6 @@ const Container = styled.div`
   height: 100vh;
   overflow: hidden;
   display: flex;
-  /* background: #111; */
   flex-direction: column;
   perspective: 1000px;
   transform-style: preserve-3d;
@@ -170,14 +166,5 @@ const Subtitle = styled.p`
   color: #888;
   margin-bottom: 0;
 `;
-
-// const TextGallery = styled.p`
-//   font-family: Serif;
-//   position: absolute;
-//   top: 100%;
-//   left: 50%;
-//   transform: translate(-50%, -50%) rotateX(90deg);
-//   color: #fff;
-// `;
 
 export default Gallery;

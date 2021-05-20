@@ -16,7 +16,7 @@ const GalleryItemPage = () => {
 
   useEffect(() => {
     api
-      .getPhoto(5)
+      .getPhoto(10)
       .then((data) => {
         console.log(data.data);
         setPhotos(data.data);
@@ -42,6 +42,7 @@ const GalleryItemPage = () => {
 const Container = styled.div`
   max-width: 100%;
   height: 100vh;
+
 `;
 
 const Wrapper = styled.div`
@@ -59,19 +60,4 @@ const Wrapper = styled.div`
   }
 `;
 
-// const Button = styled.button`
-//   display: block;
-//   background-color: #373a3c;
-//   color: #fff;
-//   width: 140px;
-//   height: 40px;
-//   margin: 0 auto;
-//   border-radius: 5px;
-//   text-align: center;
-//   margin-top: 30px;
-//   margin-bottom: 30px;
-//   border: none;
-//   font-family: ${({ theme }) => theme.fonts.lora};
-//   font-size: 12px;
-// `;
 export default GalleryItemPage;

@@ -22,6 +22,7 @@
 .subtitle {
   color: #6a6a6a;
   text-align: center;
+  font-family: "Lora", sans-serif;
   margin: 0;
   padding: 0;
 }
@@ -36,9 +37,6 @@
 
 /*FORM */
 .form {
-  /* display: block;
-  margin: 0 auto;
-  width: 92%; */
   width: 940px;
   display: flex;
   justify-content: space-around;
@@ -65,7 +63,7 @@
   height: 50px;
   outline: none;
   font-size: 14px;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Raleway", sans-serif;
   color: rgb(187, 187, 187);
   font-weight: bold;
   text-transform: uppercase;
@@ -84,7 +82,7 @@
   height: 200px;
   outline: none;
   font-size: 14px;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Raleway", sans-serif;
   color: rgb(187, 187, 187);
   font-weight: bold;
   text-transform: uppercase;
@@ -100,7 +98,6 @@
 }
 
 .input:focus {
-  /* outline: none; */
   border: 1px solid #66afe9;
   border-radius: 4px;
 }
@@ -141,24 +138,10 @@
 
 /*BUTTON SUBMIT FORM*/
 .button {
-  /* display: block;
-  margin: 0 auto;
-  width: 210px;
-  background-color: transparent;
-  border: 1px solid #ffffff;
-  padding: 16px 0;
-  outline: none;
-  border-radius: 4px;
-  font-size: 16px;
-  line-height: 16px;
-  cursor: pointer;
-  color: #fefefe; */
-
   display: block;
   background-color: #373a3c;
   color: #fff;
   width: 210px;
-  /* height: 40px; */
   padding: 16px 0;
   margin: 0 auto;
   border-radius: 5px;
@@ -168,12 +151,10 @@
   border: none;
   cursor: pointer;
   font-family: "Lora", sans-serif;
-  font-size: 12px;
+  font-size: 20px;
 }
 
 .button:hover {
-  /*background-color: #d24335;*/
   background-color: #6a6a6a;
   transition: background-color 0.5s ease;
-  /* color: #6a6a6a; */
 }

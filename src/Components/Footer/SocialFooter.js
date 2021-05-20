@@ -10,13 +10,17 @@ const SocialFooter = () => {
       <Wrapper>
         <Logo>Logo Photographer</Logo>
         <SocialWrapper>
-          <IconButton>
+          <IconButton backgroundColor={"#3b5998"}>
             <FacebookIcon />
           </IconButton>
-          <IconButton>
+          <IconButton
+            backgroundColor={
+              "linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%)"
+            }
+          >
             <InstagramIcon />
           </IconButton>
-          <IconButton>
+          <IconButton backgroundColor={"#23ACED"}>
             <TwitterIcon />
           </IconButton>
         </SocialWrapper>
@@ -27,6 +31,8 @@ const SocialFooter = () => {
 
 const Container = styled.div`
   background-color: #161616;
+  padding-top: 20px;
+  padding-bottom: 20px;
 `;
 
 const Wrapper = styled.div`
@@ -53,9 +59,9 @@ const IconButton = styled.button`
   height: 38px;
   border-radius: 50%;
   border: transparent;
-  background: #222222;
+  background-color: #222222;
   &:hover {
-    background: rgba(255, 255, 255, 0.7);
+    background: ${(props) => props.backgroundColor};
     cursor: pointer;
     transition: background 0.5s ease;
   }
@@ -65,18 +71,30 @@ const FacebookIcon = styled(Facebook)`
   height: 20px;
   width: 20px;
   fill: #535353;
+  ${IconButton}:hover & {
+    fill: #ffffff;
+    transition: fill 0.5s ease;
+  }
 `;
 
 const InstagramIcon = styled(Instagram)`
   width: 20px;
   height: 20px;
   fill: #535353;
+  ${IconButton}:hover & {
+    fill: #ffffff;
+    transition: fill 0.5s ease;
+  }
 `;
 
 const TwitterIcon = styled(Twitter)`
   width: 20px;
   height: 20px;
   fill: #535353;
+  ${IconButton}:hover & {
+    fill: #ffffff;
+    transition: fill 0.5s ease;
+  }
 `;
 
 export default SocialFooter;

@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import styled from "styled-components";
 
 import Header from "../Header/Header";
@@ -6,9 +6,11 @@ import Gallery from "../Gallery/Gallery";
 import galleryImages from "../../assets/json/images.json";
 import About from "../About/About";
 import Footer from "../Footer/Footer";
+// import * as api from "../../api/api";
 
 const Dashboard = () => {
   const scrollRef = useRef(null);
+  // const [galleryImages, setGalleryImages] = useState(null);
 
   const executeScroll = () => {
     return scrollRef.current.scrollIntoView({
@@ -16,6 +18,16 @@ const Dashboard = () => {
       behavior: "smooth",
     });
   };
+
+  // useEffect(() => {
+  //   api
+  //     .getPhoto(5)
+  //     .then((data) => {
+  //       console.log(data.data);
+  //       setGalleryImages(data.data);
+  //     })
+  //     .catch((e) => console.log("Error when get photos: ", e));
+  // }, []);
 
   return (
     <>
@@ -31,7 +43,7 @@ const Dashboard = () => {
       </Section>
       <About />
       <Gallery galleryImages={galleryImages} scrollRef={scrollRef} />
-      <Footer/>
+      <Footer />
     </>
   );
 };
