@@ -1,6 +1,8 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Link, useRouteMatch } from "react-router-dom";
 import styled from "styled-components";
+
+import * as api from "../../api/api";
 
 import {
   SpinContainer,
@@ -18,12 +20,51 @@ const Gallery = ({ galleryImages, scrollRef }) => {
   const [radius, setRadius] = useState(240);
   const [autoRotate, setAutoRotate] = useState(true);
   const [rotateSpeed, setRotateSpees] = useState(-60);
+  const dragRef = useRef();
+  const spinRef = useRef();
+  // const imgRef = useRef();
+  // const videoRef = useRef();
+
+  // useEffect(() => {
+  //   const odrag = dragRef.current;
+  //   const ospin = spinRef.current;
+  //   const aImg = ospin.getElementsByTagName("img");
+  //   const aVid = ospin.getElementsByTagName("video");
+  //   console.log("odrag", odrag);
+  //   console.log("ospin", ospin);
+  //   console.log("img", aImg);
+  //   console.log("vid", aVid);
+  //   const elArr = [...aImg, ...aVid];
+  //   console.log("element", elArr);
+
+  //   function init(delayTime) {
+  //     for (let i = 0; i < elArr.length; i += 1) {
+  //       elArr[i].style.transform =
+  //         "rotateY(" +
+  //         i * (360 / elArr.length) +
+  //         "deg) translateZ(" +
+  //         radius +
+  //         "px)";
+  //         elArr[i].style.transition = "transform 1s";
+  //         elArr[i].style.transitionDelay =
+  //         delayTime || (elArr.length - i) / 4 + "s";
+  //     }
+  //   }
+
+  //   // setTimeout(init, 1000);
+
+
+  // });
 
   useEffect(() => {
     var odrag = document.getElementById("drag-container");
+    console.log("odrag", odrag);
     var ospin = document.getElementById("spin-container");
+    console.log("ospin", ospin);
     var aImg = ospin.getElementsByTagName("img");
+    console.log("aImg", aImg);
     var aVid = ospin.getElementsByTagName("video");
+    console.log("aVid", aVid);
     var aEle = [...aImg, ...aVid]; // combine 2 arrays
 
     function init(delayTime) {
@@ -114,7 +155,6 @@ const Gallery = ({ galleryImages, scrollRef }) => {
     // };
   }, [autoRotate, radius, rotateSpeed]);
 
-
   const match = useRouteMatch();
   console.log(match);
 
@@ -125,11 +165,15 @@ const Gallery = ({ galleryImages, scrollRef }) => {
         <Subtitle>This is a subtitle, feel free to change it!</Subtitle>
       </HeadlineWrap>
 
-      <DragContainer id="drag-container">
-        <SpinContainer id="spin-container">
-          {galleryImages.map((image, index) => (
-            <Link key={index} to={`${match.path}albums/${index}`}>
-              <GalleryImages src={image.src} alt={image.alt} />
+      <DragContainer id="drag-container" ref={dragRef}>
+        <SpinContainer id="spin-container" ref={spinRef}>
+          {galleryImages.map((image) => (
+            <Link key={image.id} to={`${match.path}albums/${image.id}`}>
+              <GalleryImages
+                // src={`data:image.jpg;base64,${image.data}`}
+                src={image.src}
+                alt={image.alt}
+              />
             </Link>
           ))}
         </SpinContainer>

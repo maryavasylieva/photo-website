@@ -5,10 +5,12 @@ import { Link } from "react-router-dom";
 const About = () => {
   return (
     <Container>
-      <Image
-        src="https://images.pexels.com/photos/6869093/pexels-photo-6869093.jpeg?cs=srgb&dl=pexels-kira-schwarz-6869093.jpg&fm=jpg"
-        alt="about"
-      />
+      <ImgWrapp>
+        <Image
+          src="https://images.pexels.com/photos/6869093/pexels-photo-6869093.jpeg?cs=srgb&dl=pexels-kira-schwarz-6869093.jpg&fm=jpg"
+          alt="about"
+        />
+      </ImgWrapp>
       <WrapDescription>
         <Title>About Us</Title>
         <Text>
@@ -33,24 +35,45 @@ const About = () => {
 const Container = styled.div`
   max-width: 100%;
   display: flex;
-  justify-content: space-around;
-  padding: 90px 70px;
   background: #f8f8f8;
+  flex-direction: column;
+  padding: 30px 20px 30px 20px;
+  @media screen and (min-width: ${({ theme }) => theme.screen.desktop}) {
+    justify-content: space-around;
+    padding: 90px 70px;
+  }
+`;
+
+const ImgWrapp = styled.div`
+  padding: 0px 20px 0px 20px;
+  @media screen and (min-width: ${({ theme }) => theme.screen.desktop}) {
+    padding: 0;
+  }
 `;
 
 const Image = styled.img`
-  width: 500px;
-  height: 600px;
+  height: auto;
+  max-width: 100%;
+  vertical-align: top;
+  @media screen and (min-width: ${({ theme }) => theme.screen.desktop}) {
+    width: 500px;
+    height: 600px;
+  }
 `;
 
 const WrapDescription = styled.div`
-  width: 500px;
+  @media screen and (min-width: ${({ theme }) => theme.screen.desktop}) {
+    width: 500px;
+  }
 `;
 
 const Title = styled.h2`
-  font-size: 32px;
   font-family: ${({ theme }) => theme.fonts.lora};
   font-weight: 400;
+  text-align: center;
+  @media screen and (min-width: ${({ theme }) => theme.screen.desktop}) {
+    font-size: 32px;
+  }
 `;
 
 const Text = styled.p`
@@ -71,12 +94,14 @@ const Text = styled.p`
       margin-bottom: 40px;
     }
   }
+  @media screen and (min-width: ${({ theme }) => theme.screen.desktop}) {
+  }
 `;
 
 const ButtonWrap = styled.div`
   text-align: left;
   /* outline: 2px solid red; */
-  padding:  30px 0 30px;
+  padding: 30px 0 30px;
 `;
 
 const Button = styled(Link)`
