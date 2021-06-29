@@ -35,17 +35,6 @@ const GalleryItem = ({ src, alt, description, name }) => (
 );
 
 const Container = styled.div`
-  /* &::after {
-    display: block;
-    width: 800px;
-    height: 1px;
-    background-color: #e3e3e3;
-    content: "";
-    text-align: left;
-    margin-top: 40px;
-    margin-bottom: 40px;
-    margin: 0 auto;
-  } */
 `;
 
 const Wrapper = styled.div`

@@ -96,26 +96,29 @@ const AlbumsItem = ({ photos }) => {
 };
 
 const Container = styled(motion.ul)`
-  overflow: hidden; //TODO: fix side scroll;
+  /* overflow: hidden; //TODO: fix side scroll; */
   margin: 0;
   padding: 0;
   list-style-type: none;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(328px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   grid-template-rows: repeat(6, 200px);
   grid-gap: 1rem;
   grid-auto-flow: dense;
+  justify-items: center;
 `;
 
 const ImageList = styled(motion.li)`
-  &:nth-child(4n) {
-    grid-column: span 2;
-    grid-row: span 2;
-  }
+  @media screen and (min-width: ${({ theme }) => theme.screen.desktop}) {
+    &:nth-child(4n) {
+      grid-column: span 2;
+      grid-row: span 2;
+    }
 
-  &:nth-child(8n) {
-    grid-column: span 3;
-    grid-row: span 3;
+    &:nth-child(8n) {
+      grid-column: span 3;
+      grid-row: span 3;
+    }
   }
 `;
 
