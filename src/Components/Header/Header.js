@@ -31,7 +31,7 @@ const Header = ({ onClick }) => {
                   <NavBar>
                     <Logo to="/">LOGO PHOTOGRAPHY</Logo>
                   </NavBar>
-                  <div className={styles.navSection}>
+                  <NavSection className={styles.navSection}>
                     <Text>Welcome to</Text>
                     <TextHead>Pure Photography</TextHead>
                     <Text>
@@ -41,7 +41,7 @@ const Header = ({ onClick }) => {
                     <ButtonWrap>
                       <Button onClick={onClick}>Get Started</Button>
                     </ButtonWrap>
-                  </div>
+                  </NavSection>
 
                   <Burger open={open} setOpen={setOpen} />
                   <BurgerMenu open={open} setOpen={setOpen} />
@@ -139,6 +139,13 @@ const Logo = styled(Link)`
   @media screen and (min-width: ${({ theme }) => theme.screen.desktop}) {
     color: #ffffff;
     font-size: 20px;
+  }
+`;
+
+const NavSection = styled.div`
+  padding-top: 100px;
+  @media screen and (min-width: ${({ theme }) => theme.screen.desktop}) {
+    padding: 0;
   }
 `;
 

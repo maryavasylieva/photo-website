@@ -40,6 +40,7 @@ const Container = styled.div`
   padding: 30px 20px 30px 20px;
   @media screen and (min-width: ${({ theme }) => theme.screen.desktop}) {
     justify-content: space-around;
+    flex-direction: row;
     padding: 90px 70px;
   }
 `;
@@ -93,8 +94,6 @@ const Text = styled.p`
       margin-top: 40px;
       margin-bottom: 40px;
     }
-  }
-  @media screen and (min-width: ${({ theme }) => theme.screen.desktop}) {
   }
 `;
 
