@@ -30,6 +30,8 @@ const item = {
   },
 };
 
+//TODO: fix lighbox window: fix openLightBox fn;
+
 const AlbumsItem = ({ photos }) => {
   const [currentImage, setCurrentImage] = useState(0);
   const [viewerIsOpen, setViewerIsOpen] = useState(false);
@@ -94,19 +96,15 @@ const AlbumsItem = ({ photos }) => {
 };
 
 const Container = styled(motion.ul)`
-  overflow: hidden;
+  overflow: hidden; //TODO: fix side scroll;
   margin: 0;
+  padding: 0;
   list-style-type: none;
-  /* grid-template-columns: repeat(3, 1fr); */
-  /* grid-template-columns: repeat(auto-fit, minmax(328px, 1fr));
-  grid-template-rows: repeat(8, 5vw);
-  grid-gap: 15px; */
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(328px, 1fr));
   grid-template-rows: repeat(6, 200px);
   grid-gap: 1rem;
   grid-auto-flow: dense;
-  padding: 15px;
 `;
 
 const ImageList = styled(motion.li)`

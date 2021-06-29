@@ -19,8 +19,8 @@ const Header = ({ onClick }) => {
       <div>
         <Media
           queries={{
-            small: "(max-width: 328px)",
-            medium: "(min-width: 768px) and (max-width: 1189px)",
+            small: "(max-width: 599px)",
+            medium: "(min-width: 600px) and (max-width: 1199px)",
             large: "(min-width: 1200px)",
           }}
         >

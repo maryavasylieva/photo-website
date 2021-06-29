@@ -24,7 +24,6 @@ const GalleryItemPage = () => {
       .catch((e) => console.log("Error when get photos: ", e));
   }, []);
 
-
   const getImageObj = (arr, id) => arr.find((el) => el.id === id);
   console.log(history);
   console.log(id);
@@ -42,21 +41,33 @@ const GalleryItemPage = () => {
 const Container = styled.div`
   max-width: 100%;
   height: 100vh;
-
 `;
 
 const Wrapper = styled.div`
-  max-width: 1200px;
   margin: 0 auto;
+  padding: 0px 10px 0px 10px;
   &:before {
     display: block;
-    width: 500px;
+    width: 200px;
     height: 1px;
     background-color: #e3e3e3;
     content: "";
     margin: 0 auto;
     margin-top: 40px;
     margin-bottom: 40px;
+  }
+
+  @media screen and (min-width: ${({ theme }) => theme.screen.desktop}) {
+    &:before {
+      display: block;
+      width: 500px;
+      height: 1px;
+      background-color: #e3e3e3;
+      content: "";
+      margin: 0 auto;
+      margin-top: 40px;
+      margin-bottom: 40px;
+    }
   }
 `;
 
