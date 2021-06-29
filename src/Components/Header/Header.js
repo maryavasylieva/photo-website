@@ -49,6 +49,20 @@ const Header = ({ onClick }) => {
               )}
               {matches.medium && (
                 <>
+                  <NavBar>
+                    <Logo to="/">LOGO PHOTOGRAPHY</Logo>
+                  </NavBar>
+                  <NavSection className={styles.navSection}>
+                    <Text>Welcome to</Text>
+                    <TextHead>Pure Photography</TextHead>
+                    <Text>
+                      We're the biggest, best equipped and most advanced Web
+                      Agency in the greater Los Angeles area.
+                    </Text>
+                    <ButtonWrap>
+                      <Button onClick={onClick}>Get Started</Button>
+                    </ButtonWrap>
+                  </NavSection>
                   <Burger open={open} setOpen={setOpen} />
                   <BurgerMenu open={open} setOpen={setOpen} />
                 </>

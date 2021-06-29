@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const About = () => {
   return (
-    <Container>
+    <Container id="#about">
       <ImgWrapp>
         <Image
           src="https://images.pexels.com/photos/6869093/pexels-photo-6869093.jpeg?cs=srgb&dl=pexels-kira-schwarz-6869093.jpg&fm=jpg"
