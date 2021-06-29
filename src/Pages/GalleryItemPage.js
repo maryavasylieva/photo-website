@@ -16,7 +16,7 @@ const GalleryItemPage = () => {
 
   useEffect(() => {
     api
-      .getPhoto(10)
+      .getPhoto(15)
       .then((data) => {
         console.log(data.data);
         setPhotos(data.data);

@@ -102,11 +102,13 @@ const FormWrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  padding: 45px 0px 0px 0px;
   @media screen and (min-width: ${({ theme }) => theme.screen.desktop}) {
     height: 700px;
     margin: 0 auto;
     flex-direction: column;
     justify-content: center;
+    padding: 0;
   }
 `;
 

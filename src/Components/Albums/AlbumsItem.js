@@ -56,7 +56,7 @@ const AlbumsItem = ({ photos }) => {
 
       <Container variants={container} initial="hidden" animate="visible">
         {photos.map((card, index) => (
-          <motion.li key={index} variants={item} className={styles.card}>
+          <ImageList key={index} variants={item} className={styles.card}>
             <Image src={`data:image.jpg;base64,${card.data}`} alt={card.name} />
 
             <div className={styles.iconContainer}>
@@ -69,7 +69,7 @@ const AlbumsItem = ({ photos }) => {
                 </IconButton>
               </IconList>
             </div>
-          </motion.li>
+          </ImageList>
         ))}
       </Container>
 
@@ -94,14 +94,31 @@ const AlbumsItem = ({ photos }) => {
 };
 
 const Container = styled(motion.ul)`
-  display: grid;
   overflow: hidden;
   margin: 0;
   list-style-type: none;
-  grid-template-columns: repeat(3, 1fr);
-  /* grid-template-rows: repeat(8, 5vw); */
-  grid-gap: 15px;
+  /* grid-template-columns: repeat(3, 1fr); */
+  /* grid-template-columns: repeat(auto-fit, minmax(328px, 1fr));
+  grid-template-rows: repeat(8, 5vw);
+  grid-gap: 15px; */
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(328px, 1fr));
+  grid-template-rows: repeat(6, 200px);
+  grid-gap: 1rem;
+  grid-auto-flow: dense;
   padding: 15px;
+`;
+
+const ImageList = styled(motion.li)`
+  &:nth-child(4n) {
+    grid-column: span 2;
+    grid-row: span 2;
+  }
+
+  &:nth-child(8n) {
+    grid-column: span 3;
+    grid-row: span 3;
+  }
 `;
 
 const Image = styled.img`

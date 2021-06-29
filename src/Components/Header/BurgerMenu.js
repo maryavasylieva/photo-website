@@ -34,7 +34,7 @@ const Menu = styled.div`
   right: 0;
   bottom: 0;
   max-width: 100%;
-  height: 100vh;
+  height: 50vh;
   background: white;
   color: white;
   list-style: none;
@@ -42,6 +42,15 @@ const Menu = styled.div`
   transform: ${({ open }) => (open ? "translateY(0)" : "translateY(-100%)")};
   background-color: ${({theme}) => theme.colors.white };
   transition: transform 0.2s;
+  &:before {
+    display: block;
+      min-width: 100%;
+      height: 2px;
+      box-shadow: 0 1px 3px rgba(15, 15, 15, 0.13);
+      background-color: #e3e3e3;
+      content: "";
+      text-align: center;
+  }
 `;
 
 const Navigation = styled.div`
@@ -63,29 +72,26 @@ const Link = styled(NavLink)`
   font-size: 15px;
   display: inline-block;
   text-decoration: none;
+  padding: 13px 0px;
 `;
 
 const NavElem = styled.li`
   display: block;
   text-decoration: none;
-  padding: 10px 0px 10px 0px;
   font-size: 13px;
   text-transform: uppercase;
   font-family: ${({ theme }) => theme.fonts.lora};
-  margin-right: 35px;
   &:last-child {
     margin-right: 0;
   }
   &:not(:last-child) {
     &:after {
       display: block;
-      width: 50px;
+      width: 250px;
       height: 1px;
       background-color: #e3e3e3;
       content: "";
-      text-align: left;
-      margin-top: 4px;
-      margin-bottom: 4px;
+      text-align: center;
     }
   }
 `;

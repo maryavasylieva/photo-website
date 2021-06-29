@@ -98,16 +98,19 @@ const Text = styled.p`
 `;
 
 const ButtonWrap = styled.div`
-  text-align: left;
+  text-align: center;
   /* outline: 2px solid red; */
   padding: 30px 0 30px;
+  @media screen and (min-width: ${({theme}) => theme.screen.desktop}) {
+    text-align: left;
+  }
 `;
 
 const Button = styled(Link)`
   border: 2px solid transparent;
   border-radius: 5px;
   padding: 15px 28px;
-  margin-top: 20px;
+  /* margin-top: 20px; */
   font-family: ${({ theme }) => theme.fonts.lora};
   text-transform: uppercase;
   font-weight: 500;
@@ -116,6 +119,7 @@ const Button = styled(Link)`
   text-decoration: none;
   color: #ffffff;
   cursor: pointer;
+  /* margin: 0 auto; */
 `;
 
 export default About;

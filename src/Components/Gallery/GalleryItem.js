@@ -18,7 +18,9 @@ const GalleryItem = ({ src, alt, description, name }) => (
     </WrapperHeadline>
 
     <Wrapper>
-      <Image src={src} alt={alt} />
+      <ImgWrap>
+        <Image src={src} alt={alt} />
+      </ImgWrap>
       <WrapDescription>
         <Title>About Project</Title>
         <Text>{description}</Text>
@@ -48,23 +50,46 @@ const Container = styled.div`
 
 const Wrapper = styled.div`
   display: flex;
-  justify-content: space-around;
-  margin: 90px 0 70px 0;
+  flex-direction: column;
+  margin: 50px 0 40px 0;
+  padding: 0px 20px 0px 20px;
+  @media screen and (min-width: ${({ theme }) => theme.screen.desktop}) {
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 90px 0 70px 0;
+  }
+`;
+
+const ImgWrap = styled.div`
+  padding: 0px 20px 0px 20px;
+  @media screen and (min-width: ${({ theme }) => theme.screen.desktop}) {
+    padding: 0;
+  }
 `;
 
 const Image = styled.img`
-  width: 500px;
-  height: 600px;
+  height: auto;
+  max-width: 100%;
+  vertical-align: top;
+  @media screen and (min-width: ${({ theme }) => theme.screen.desktop}) {
+    width: 500px;
+    height: 600px;
+  }
 `;
 
 const WrapDescription = styled.div`
-  width: 500px;
+  @media screen and (min-width: ${({ theme }) => theme.screen.desktop}) {
+    width: 500px;
+  }
 `;
 
 const Title = styled.h2`
-  font-size: 32px;
   font-family: ${({ theme }) => theme.fonts.lora};
   font-weight: 400;
+  text-align: center;
+  @media screen and (min-width: ${({ theme }) => theme.screen.desktop}) {
+    font-size: 32px;
+  }
 `;
 
 const Text = styled.p`
@@ -104,10 +129,13 @@ const Section = styled.div`
 
 const Headline = styled.h2`
   color: white;
-  font-size: 50px;
+  font-size: 26px;
   font-weight: 400;
   margin: 0;
   font-family: ${({ theme }) => theme.fonts.lora};
+  @media screen and (min-width: ${({ theme }) => theme.screen.desktop}) {
+    font-size: 50px;
+  }
 `;
 
 const BreadcrumbsHolder = styled.ul`
