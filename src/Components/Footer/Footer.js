@@ -3,10 +3,10 @@ import SocialFooter from "./SocialFooter";
 
 const Footer = () => {
   return (
-    <>
+    <div id="contact">
       <ContactFormContainer />
-      <SocialFooter/>
-    </>
+      <SocialFooter />
+    </div>
   );
 };
 

@@ -159,7 +159,7 @@ const Gallery = ({ galleryImages, scrollRef }) => {
   console.log(match);
 
   return (
-    <Container ref={scrollRef}>
+    <Container ref={scrollRef} id="albums">
       <HeadlineWrap>
         <Title>Latest Albums</Title>
         <Subtitle>This is a subtitle, feel free to change it!</Subtitle>

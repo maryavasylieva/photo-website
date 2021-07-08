@@ -6,13 +6,15 @@ import Media from "react-media";
 
 import NavigationList from "./NavigationList";
 import styles from "./Header.module.css";
-import BurgerMenu from "./BurgerMenu";
-import Burger from "./Burger";
+import BurgerHeader from "./BurgerHeader";
+
+// import BurgerMenu from "./BurgerMenu";
+// import Burger from "./Burger";
 
 // TODO: Set sticky header
 
 const Header = ({ onClick }) => {
-  const [open, setOpen] = useState(false);
+  // const [open, setOpen] = useState(false);
 
   return (
     <>
@@ -28,9 +30,8 @@ const Header = ({ onClick }) => {
             <>
               {matches.small && (
                 <>
-                  <NavBar>
-                    <Logo to="/">LOGO PHOTOGRAPHY</Logo>
-                  </NavBar>
+                  <BurgerHeader />
+
                   <NavSection className={styles.navSection}>
                     <Text>Welcome to</Text>
                     <TextHead>Pure Photography</TextHead>
@@ -43,15 +44,14 @@ const Header = ({ onClick }) => {
                     </ButtonWrap>
                   </NavSection>
 
-                  <Burger open={open} setOpen={setOpen} />
-                  <BurgerMenu open={open} setOpen={setOpen} />
+                  {/* <Burger open={open} setOpen={setOpen} /> */}
+                  {/* <BurgerMenu open={open} setOpen={setOpen} /> */}
                 </>
               )}
               {matches.medium && (
                 <>
-                  <NavBar>
-                    <Logo to="/">LOGO PHOTOGRAPHY</Logo>
-                  </NavBar>
+                  <BurgerHeader />
+
                   <NavSection className={styles.navSection}>
                     <Text>Welcome to</Text>
                     <TextHead>Pure Photography</TextHead>
@@ -63,8 +63,9 @@ const Header = ({ onClick }) => {
                       <Button onClick={onClick}>Get Started</Button>
                     </ButtonWrap>
                   </NavSection>
-                  <Burger open={open} setOpen={setOpen} />
-                  <BurgerMenu open={open} setOpen={setOpen} />
+
+                  {/* <Burger open={open} setOpen={setOpen} /> */}
+                  {/* <BurgerMenu open={open} setOpen={setOpen} /> */}
                 </>
               )}
               {matches.large && (
@@ -125,14 +126,6 @@ const Header = ({ onClick }) => {
   );
 };
 
-const NavBar = styled.div`
-  width: 100%;
-  height: 60px;
-  box-shadow: 0 1px 3px rgba(15, 15, 15, 0.13);
-  display: flex;
-  align-items: center;
-  padding: 0 1.5em;
-`;
 
 const Nav = styled.div`
   max-width: 100%;

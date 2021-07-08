@@ -1,6 +1,5 @@
 import React, { useRef, useState, useEffect } from "react";
 import styled from "styled-components";
-import Media from "react-media";
 
 import Header from "../Header/Header";
 import Gallery from "../Gallery/Gallery";

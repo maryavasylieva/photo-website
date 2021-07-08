@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { NavLink } from "react-router-dom";
+import { HashLink } from 'react-router-hash-link'
 
 const NavigationList = () => {
   return (
@@ -10,16 +11,16 @@ const NavigationList = () => {
           <Link to="/">Home</Link>
         </NavElem>
         <NavElem>
-          <Link to="/about">About</Link>
+          <Link to="#about">About</Link>
         </NavElem>
         <NavElem>
-          <Link to="/albums">Albums</Link>
+          <Link to="#albums">Albums</Link>
         </NavElem>
         <NavElem>
           <Link to="/blog">Blog</Link>
         </NavElem>
         <NavElem>
-          <Link to="/contact">Contact</Link>
+          <Link to="#contact">Contact</Link>
         </NavElem>
       </NavList>
     </Navigation>
@@ -39,7 +40,7 @@ const NavList = styled.ul`
   align-items: center;
 `;
 
-const Link = styled(NavLink)`
+const Link = styled(HashLink)`
   color: #ffffff;
   font-size: 15px;
   display: inline-block;

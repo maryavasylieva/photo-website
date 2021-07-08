@@ -40,31 +40,27 @@ const Menu = styled.div`
   list-style: none;
   padding-top: 4rem;
   transform: ${({ open }) => (open ? "translateY(0)" : "translateY(-100%)")};
-  background-color: ${({theme}) => theme.colors.white };
+  background-color: ${({ theme }) => theme.colors.white};
   transition: transform 0.2s;
   &:before {
     display: block;
-      min-width: 100%;
-      height: 2px;
-      box-shadow: 0 1px 3px rgba(15, 15, 15, 0.13);
-      background-color: #e3e3e3;
-      content: "";
-      text-align: center;
+    min-width: 100%;
+    height: 2px;
+    box-shadow: 0 1px 3px rgba(15, 15, 15, 0.13);
+    background-color: #e3e3e3;
+    content: "";
+    text-align: center;
   }
 `;
 
 const Navigation = styled.div`
   display: flex;
-  /* align-items: center; */
-  /* justify-content: space-evenly; */
 `;
 
 const NavList = styled.ul`
   list-style-type: none;
   display: flex;
-  /* justify-content: center; */
   flex-direction: column;
-  /* align-items: center; */
 `;
 
 const Link = styled(NavLink)`

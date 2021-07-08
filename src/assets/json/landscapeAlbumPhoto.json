@@ -1,26 +1,58 @@
 [
-    {
-        "src": "https://images.pexels.com/photos/5326918/pexels-photo-5326918.jpeg?cs=srgb&dl=pexels-ben-mack-5326918.jpg&fm=jpg",
-        "alt": "landscape photo"
-      },
-      {
-        "src": "https://images.pexels.com/photos/6866487/pexels-photo-6866487.jpeg?cs=srgb&dl=pexels-engin-akyurt-6866487.jpg&fm=jpg",
-        "alt": "landscape photo"
-      },
-      {
-        "src": "https://images.pexels.com/photos/5595490/pexels-photo-5595490.jpeg?cs=srgb&dl=pexels-nadezhda-moryak-5595490.jpg&fm=jpg",
-        "alt": "landscape photo"
-      },
-      {
-        "src": "https://images.pexels.com/photos/5769563/pexels-photo-5769563.jpeg?cs=srgb&dl=pexels-julia-volk-5769563.jpg&fm=jpg",
-        "alt": "landscape photo"
-      },
-      {
-        "src": "https://images.pexels.com/photos/3222371/pexels-photo-3222371.jpeg?cs=srgb&dl=pexels-ethan-jones-3222371.jpg&fm=jpg",
-        "alt": "landscape photo"
-      },
-      {
-        "src": "https://images.pexels.com/photos/6869070/pexels-photo-6869070.jpeg?cs=srgb&dl=pexels-kira-schwarz-6869070.jpg&fm=jpg",
-        "alt": "landscape photo"
-      }
+  {
+    "src": "https://images.pexels.com/photos/5326918/pexels-photo-5326918.jpeg?cs=srgb&dl=pexels-ben-mack-5326918.jpg&fm=jpg",
+    "alt": "landscape photo"
+  },
+  {
+    "src": "https://images.pexels.com/photos/6866487/pexels-photo-6866487.jpeg?cs=srgb&dl=pexels-engin-akyurt-6866487.jpg&fm=jpg",
+    "alt": "landscape photo"
+  },
+  {
+    "src": "https://images.pexels.com/photos/5595490/pexels-photo-5595490.jpeg?cs=srgb&dl=pexels-nadezhda-moryak-5595490.jpg&fm=jpg",
+    "alt": "landscape photo"
+  },
+  {
+    "src": "https://images.pexels.com/photos/5769563/pexels-photo-5769563.jpeg?cs=srgb&dl=pexels-julia-volk-5769563.jpg&fm=jpg",
+    "alt": "landscape photo"
+  },
+  {
+    "src": "https://images.pexels.com/photos/3222371/pexels-photo-3222371.jpeg?cs=srgb&dl=pexels-ethan-jones-3222371.jpg&fm=jpg",
+    "alt": "landscape photo"
+  },
+  {
+    "src": "https://images.pexels.com/photos/6869070/pexels-photo-6869070.jpeg?cs=srgb&dl=pexels-kira-schwarz-6869070.jpg&fm=jpg",
+    "alt": "landscape photo"
+  },
+  {
+    "src": "https://images.pexels.com/photos/4855618/pexels-photo-4855618.jpeg?cs=srgb&dl=pexels-fotografierende-4855618.jpg&fm=jpg",
+    "alt": "mountain photo"
+  },
+  {
+    "src": "https://images.pexels.com/photos/6158918/pexels-photo-6158918.jpeg?cs=srgb&dl=pexels-alasdair-braxton-6158918.jpg&fm=jpg",
+    "alt": "mountain photo"
+  },
+  {
+    "src": "https://images.pexels.com/photos/4449229/pexels-photo-4449229.jpeg?cs=srgb&dl=pexels-alasdair-braxton-4449229.jpg&fm=jpg",
+    "alt": "mountain photo"
+  },
+  {
+    "src": "https://images.pexels.com/photos/6745379/pexels-photo-6745379.jpeg?cs=srgb&dl=pexels-gaspar-zaldo-6745379.jpg&fm=jpg",
+    "alt": "mountain photo"
+  },
+  {
+    "src": "https://images.pexels.com/photos/6822114/pexels-photo-6822114.jpeg?cs=srgb&dl=pexels-anastasiya-vragova-6822114.jpg&fm=jpg",
+    "alt": "travel photo"
+  },
+  {
+    "src": "https://images.pexels.com/photos/4106856/pexels-photo-4106856.jpeg?cs=srgb&dl=pexels-hakeem-james-hausley-4106856.jpg&fm=jpg",
+    "alt": "travel photo"
+  },
+  {
+    "src": "https://images.pexels.com/photos/5994355/pexels-photo-5994355.jpeg?cs=srgb&dl=pexels-matteus-silva-de-oliveira-5994355.jpg&fm=jpg",
+    "alt": "travel photo"
+  },
+  {
+    "src": "https://images.pexels.com/photos/709854/pexels-photo-709854.jpeg?cs=srgb&dl=pexels-daria-shevtsova-709854.jpg&fm=jpg",
+    "alt": "travel photo"
+  }
 ]

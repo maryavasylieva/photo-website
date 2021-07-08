@@ -1,3 +1,6 @@
+import styled from "styled-components";
+import { NavLink } from "react-router-dom";
+
 import StyledBurger from "./Burger.styled";
 
 const Burger = ({ open, setOpen }) => {
@@ -9,5 +12,6 @@ const Burger = ({ open, setOpen }) => {
     </StyledBurger>
   );
 };
+
 
 export default Burger;

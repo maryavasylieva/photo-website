@@ -1,9 +1,10 @@
-import { useState, useCallback } from "react";
+import { useState, useEffect } from "react";
 import Lightbox from "react-image-lightbox";
 import "react-image-lightbox/style.css";
 // import Gallery from "react-photo-gallery";
 import styled from "styled-components";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 import { ReactComponent as Glass } from "../../assets/glass.svg";
 import { ReactComponent as LinkChain } from "../../assets/link (1).svg";
@@ -35,13 +36,19 @@ const item = {
 const AlbumsItem = ({ photos }) => {
   const [currentImage, setCurrentImage] = useState(0);
   const [viewerIsOpen, setViewerIsOpen] = useState(false);
+  // const [mounted, setMounted] = useState(true);
 
-  const openLightbox = useCallback((event, { photo, index }) => {
-    console.log(photo);
-    console.log(index);
-    setCurrentImage(index);
+  // const openLightbox = useCallback((event, { photo, index }) => {
+  //   console.log(photo);
+  //   console.log(index);
+  //   // setCurrentImage(index);
+  //   // setViewerIsOpen(true);
+  // }, []);
+
+  const openLightBox = () => {
+    // setMounted(!mounted);
     setViewerIsOpen(true);
-  }, []);
+  };
 
   const closeLightbox = () => {
     setCurrentImage(0);
@@ -58,12 +65,18 @@ const AlbumsItem = ({ photos }) => {
 
       <Container variants={container} initial="hidden" animate="visible">
         {photos.map((card, index) => (
-          <ImageList key={index} variants={item} className={styles.card}>
+          <ImageList
+            key={index}
+            variants={item}
+            className={styles.card}
+            onClick={openLightBox}
+          >
             <Image src={`data:image.jpg;base64,${card.data}`} alt={card.name} />
+            {/* <Image src={card.src} alt={card.alt} /> */}
 
             <div className={styles.iconContainer}>
               <IconList>
-                <IconButton onClick={openLightbox}>
+                <IconButton>
                   <IconZoom />
                 </IconButton>
                 <IconButton>
@@ -77,10 +90,10 @@ const AlbumsItem = ({ photos }) => {
 
       {viewerIsOpen && (
         <Lightbox
-          mainSrc={photos[currentImage].src}
-          nextSrc={photos[(currentImage + 1) % photos.length].src}
+          mainSrc={photos[currentImage].data}
+          nextSrc={photos[(currentImage + 1) % photos.length].data}
           prevSrc={
-            photos[(currentImage + photos.length - 1) % photos.length].src
+            photos[(currentImage + photos.length - 1) % photos.length].data
           }
           onCloseRequest={closeLightbox}
           onMovePrevRequest={() =>
@@ -160,6 +173,31 @@ const IconZoom = styled(Glass)`
 const IconLink = styled(LinkChain)`
   width: 23px;
   height: 23px;
+`;
+
+const ButtonWrap = styled.div`
+  text-align: center;
+  /* outline: 2px solid red; */
+  padding: 30px 0 30px;
+  @media screen and (min-width: ${({ theme }) => theme.screen.desktop}) {
+    text-align: left;
+  }
+`;
+
+const Button = styled(Link)`
+  border: 2px solid transparent;
+  border-radius: 5px;
+  padding: 15px 28px;
+  /* margin-top: 20px; */
+  font-family: ${({ theme }) => theme.fonts.lora};
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 14px;
+  background: #373a3c;
+  text-decoration: none;
+  color: #ffffff;
+  cursor: pointer;
+  /* margin: 0 auto; */
 `;
 
 export default AlbumsItem;

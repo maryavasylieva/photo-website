@@ -1,8 +1,8 @@
 import React, { Suspense } from "react";
 import { Route, Redirect, Switch } from "react-router-dom";
 import { ThemeProvider } from "styled-components";
-import { routes } from "./Components/routes";
 
+import { routes } from "./Components/routes";
 import { theme } from "./stylesheet/theme";
 
 function App() {

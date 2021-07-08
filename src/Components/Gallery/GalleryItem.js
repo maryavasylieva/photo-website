@@ -13,6 +13,9 @@ const GalleryItem = ({ src, alt, description, name }) => (
             <BackToHome to="/">Home</BackToHome>
           </Breadcrumb>
           <Breadcrumb>{name}</Breadcrumb>
+          <Breadcrumb>
+            <BackToHome to="/albums">All Albums</BackToHome>
+          </Breadcrumb>
         </BreadcrumbsHolder>
       </Section>
     </WrapperHeadline>
@@ -34,8 +37,7 @@ const GalleryItem = ({ src, alt, description, name }) => (
   </Container>
 );
 
-const Container = styled.div`
-`;
+const Container = styled.div``;
 
 const Wrapper = styled.div`
   display: flex;
@@ -138,7 +140,7 @@ const Breadcrumb = styled.li`
   font-size: 15px;
   font-weight: 400;
   font-family: ${({ theme }) => theme.fonts.lora};
-  &:nth-of-type(1) {
+  &:nth-child(-n + 2) {
     &:after {
       content: "/";
       display: inline-block;

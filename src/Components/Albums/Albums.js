@@ -1,7 +1,5 @@
 const Albums = () => {
-    return (
-        <div>Albums</div>
-    )
-}
+  return <h2>Albums</h2>;
+};
 
 export default Albums;
