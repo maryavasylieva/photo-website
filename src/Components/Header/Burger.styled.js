@@ -20,7 +20,7 @@ const StyledBurger = styled.button`
   }
 
   div {
-    outline: 2px solid red;
+    /* outline: 2px solid red; */
     width: 2rem;
     height: 0.25rem;
     background: ${({ theme, open }) =>

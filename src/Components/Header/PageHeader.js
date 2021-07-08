@@ -2,11 +2,7 @@ import styled from "styled-components";
 import { NavLink } from "react-router-dom";
 import Media from "react-media";
 
-import Burger from "./Burger";
-import BurgerMenu from "./BurgerMenu";
-
 import BurgerHeader from "./BurgerHeader";
-// import NavigationList from "./NavigationList";
 
 const PageHeader = () => {
   return (
