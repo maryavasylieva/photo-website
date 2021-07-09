@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { NavLink } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 
 const BurgerMenu = ({ open }) => {
   return (
@@ -10,16 +10,16 @@ const BurgerMenu = ({ open }) => {
             <Link to="/">Home</Link>
           </NavElem>
           <NavElem>
-            <Link to="/about">About</Link>
+            <Link to="#about">About</Link>
           </NavElem>
           <NavElem>
-            <Link to="/albums">Albums</Link>
+            <Link to="#albums">Albums</Link>
           </NavElem>
           <NavElem>
             <Link to="/blog">Blog</Link>
           </NavElem>
           <NavElem>
-            <Link to="/contact">Contact</Link>
+            <Link to="#contact">Contact</Link>
           </NavElem>
         </NavList>
       </Navigation>
@@ -63,7 +63,7 @@ const NavList = styled.ul`
   flex-direction: column;
 `;
 
-const Link = styled(NavLink)`
+const Link = styled(HashLink)`
   color: #000000;
   font-size: 15px;
   display: inline-block;
