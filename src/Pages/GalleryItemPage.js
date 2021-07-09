@@ -8,30 +8,30 @@ import galleryImages from "../assets/json/images.json";
 import AlbumsItem from "../Components/Albums/AlbumsItem";
 import PageHeader from "../Components/Header/PageHeader";
 import SocialFooter from "../Components/Footer/SocialFooter";
-// import photos from "../assets/json/landscapeAlbumPhoto.json";
+import photos from "../assets/json/landscapeAlbumPhoto.json";
 
 const GalleryItemPage = () => {
   const { id } = useParams();
   const history = useHistory();
 
-  const [photos, setPhotos] = useState([]);
+  // const [photos, setPhotos] = useState([]);
 
-  useEffect(() => {
-    // let isMounted = true;
-    api
-      .getPhoto(15)
-      .then((data) => {
-        console.log(data.data);
-        // if (isMounted) {
-        setPhotos(data.data);
-        // }
-      })
-      .catch((e) => console.log("Error when get photos: ", e));
+  // useEffect(() => {
+  //   // let isMounted = true;
+  //   api
+  //     .getPhoto(15)
+  //     .then((data) => {
+  //       console.log(data.data);
+  //       // if (isMounted) {
+  //       setPhotos(data.data);
+  //       // }
+  //     })
+  //     .catch((e) => console.log("Error when get photos: ", e));
 
-    // return () => {
-    //   isMounted = false;
-    // };
-  }, []);
+  //   // return () => {
+  //   //   isMounted = false;
+  //   // };
+  // }, []);
 
   const getImageObj = (arr, id) => arr.find((el) => el.id === id);
   console.log(history);

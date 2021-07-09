@@ -71,8 +71,8 @@ const AlbumsItem = ({ photos }) => {
             className={styles.card}
             onClick={openLightBox}
           >
-            <Image src={`data:image.jpg;base64,${card.data}`} alt={card.name} />
-            {/* <Image src={card.src} alt={card.alt} /> */}
+            {/* <Image src={`data:image.jpg;base64,${card.data}`} alt={card.name} /> */}
+            <Image src={card.src} alt={card.alt} />
 
             <div className={styles.iconContainer}>
               <IconList>
